@@ -1,3 +1,70 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navbar-nav > li {
+  padding-left:2.5em;
+  padding-right:2.5em;
+}
+
+.navbar{
+  margin-bottom: 0;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  top: 30%;
+  z-index: 20;
+  color: white;
+  display: table;
+}
+
+
+
+.section_1 > h1 {
+  font-size: 32px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #003c3c;
+  margin-top: 65px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section_1 > hr {
+  width: 100px;
+  background: #98C93A;
+  margin: auto;
+  margin-top: 20px;
+  height: 5px;
+  border: none;
+}
+
+.section_2 {
+  padding-top: 2em;
+}
+
+.card {
+  border: none;
+}
+
+.product-title > h5 {
+  font-size: 18px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #003c3c;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product-title > hr {
+  width: 100px;
+  background: #98C93A;
+  margin: auto;
+  margin-top: 20px;
+  height: 5px;
+  border: none;
+}
