@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'products/show'
+
+  resources :products
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
   get '/cart', to: 'carts#show'

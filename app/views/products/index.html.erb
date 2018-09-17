@@ -1,0 +1,35 @@
+<div class="product-page">
+  Products
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-10">
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-sm-4">
+            <a href="/products/<%=product.id%>" class="product-link">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/100x50" alt="Card image cap">
+                <div class="card-body">
+                  <div class="product-title">
+                    <%= product.name %>
+                  </div>
+                  <div class="card-text">
+                    <%= product.description %>
+                  </div>
+                  <div class="product-price">
+                    Price: <%= product.price %> VND
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

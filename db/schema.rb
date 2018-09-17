@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_09_03_062244) do
     t.string "img_link"
     t.float "price"
     t.integer "quantity"
-    t.boolean "availability"
+    t.boolean "availability", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

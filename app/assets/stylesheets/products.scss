@@ -1,0 +1,38 @@
+.product-page {
+  font-size: 32px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #003c3c;
+  margin-top: 65px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product-price {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.product-title {
+  font-weight: bold;
+}
+
+.product-item {
+  margin-top: 65px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.product-link {
+  color: black;
+}
+
+.product-link:hover {
+  color: black;
+  text-decoration: none;
+}
