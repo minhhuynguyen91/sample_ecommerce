@@ -1,13 +1,28 @@
 <secion class="product-item">
   <div class="container">
+    <div class="product-page" >
+      <%= @product.name %>
+      <hr>
+    </div>
+    
     <div class="row">
       <div class="col-sm-12 col-lg-6 col-md-6">
-        <img src="https://via.placeholder.com/480x480" alt="Card image cap">
+        <h1 class="section-left"> Quantity </h1>
+        <span>
+          <b> <%= @product.category %> </b> : <%= @product.quantity %> 
+        </span>
       </div>
       <div class="col-sm-12 col-lg-6 col-md-6">
-        <h1 class="product-name"> <%= @product.name %> </h1>
-        <p> <%= @product.description %> </p>
-        <p> <%= @product.price %> VND </p>
+        <h1 class="section-left"> Availability </h1>
+        <p>
+          <%= @product.availability ? '<span style="color: green"> Yes </span>'.html_safe : '<span style="color: red"> No </span>'.html_safe  %>
+        </p>
+      </div>
+    </div>
+    
+    <div class="product-description">
+      <div class="row">
+        <%= @product.description %>
       </div>
     </div>
   </div>

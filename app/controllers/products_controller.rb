@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
-  before_action :product, only: [:show]
+  before_action :set_product, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :create]
 
   def index
-    @products = Product.all
+    @products = params[:cat] ? Product.where(category: params[:cat]) : Product.all
   end
 
   def show
@@ -23,12 +24,26 @@ class ProductsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      @product.attributes = product_params
+      if @product.save
+        format.html {redirect_to root_path}
+      else
+        format.html {render :edit}
+      end
+    end
+  end
+
   private
-    def product
+    def set_product
       @product = Product.find(params[:id])
     end
 
     def product_params
-      params.require(:product).permit(:name, :description, :quantity, :availability, :img_link)
+      params.require(:product).permit(:name, :description, :quantity, :availability, :img_link, :category)
     end
 end
