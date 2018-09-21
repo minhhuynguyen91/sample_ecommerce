@@ -21,9 +21,7 @@
     </div>
     
     <div class="product-description">
-      <div class="row">
-        <%= @product.description %>
-      </div>
+      <%= @markdown.render(@product.description).html_safe %>
     </div>
   </div>
 </secion>

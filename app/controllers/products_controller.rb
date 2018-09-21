@@ -7,6 +7,9 @@ class ProductsController < ApplicationController
   end
 
   def show
+    renderer = Redcarpet::Render::HTML.new(hard_wrap: true)
+    @markdown = Redcarpet::Markdown.new(renderer, autolink: true)
+    # markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
   end
 
   def new

@@ -25,3 +25,15 @@
   </div>
   <%= f.submit type, class: 'btn btn-primary' %>
 <% end %>
+
+<script type="text/javascript">
+  var simplemde = new SimpleMDE({
+    element: document.getElementById("product_description"),
+    autofocus: true,
+    autosave: {
+      enabled: true,
+      // uniqueId: "product_description",
+      delay: 1000
+    }
+  });
+</script>

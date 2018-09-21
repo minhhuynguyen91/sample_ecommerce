@@ -68,3 +68,5 @@ gem 'hiredis', '~> 0.4.5'
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+
+gem 'redcarpet'
