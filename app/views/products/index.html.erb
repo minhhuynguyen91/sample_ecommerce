@@ -13,11 +13,11 @@
           <div class="col-sm-4">
             <a href="/products/<%=product.id%>" class="product-link">
               <div class="card">
-                <div class="card-image-top">
+                <div class="card-image-top text-center">
                   <% if product.img_link %> 
-                    <img src="<%= product.img_link %>" size="100x50" >
+                    <img src="<%= product.img_link %>" width="180" height="200" alt="Product image" >
                   <% else %>
-                    <img src='https://via.placeholder.com/100x50' >
+                    <img src='https://via.placeholder.com/180x200' >
                   <% end %> 
                 </div>
                 <div class="card-body">
