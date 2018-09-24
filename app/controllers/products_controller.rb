@@ -3,7 +3,13 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :create]
 
   def index
-    @products = params[:cat] ? Product.where(category: params[:cat]) : Product.all
+    if params[:barcode]
+      @products = Product.search(params[:barcode])
+    elsif params[:cat]
+      @products = Product.where(category: params[:cat]) 
+    else
+      @products = Product.all
+    end
   end
 
   def show
