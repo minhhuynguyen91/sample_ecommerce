@@ -1,0 +1,12 @@
+
+<% if flash[:error] %>
+
+<script>
+  swal({
+    title: 'ERROR',
+    text: 'Name or email cannot be blank',
+    icon: 'error'
+  });
+</script>
+
+<% end %>

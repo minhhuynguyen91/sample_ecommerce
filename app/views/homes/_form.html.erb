@@ -1,0 +1,23 @@
+<%= form_for contact, url: {action: 'create', controller: 'contacts'} do |f| %>
+  <div class="form-row">
+    <div class="form-group col-md-6 col-lg-6 col-sm-12">
+      <label>
+        Name
+      </label>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group col-md-6 col-lg-6 col-sm-12">
+      <label>
+        Email
+      </label>
+      <%= f.text_field :email, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>
+      Message
+    </label>
+    <%= f.text_area :message, class: 'form-control' %>
+  </div>
+  <%= f.submit 'Send', class: 'btn btn-primary' %> 
+<% end %>

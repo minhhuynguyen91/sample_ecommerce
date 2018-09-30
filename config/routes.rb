@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
   get 'products/index'
   get 'products/show'
-
+  
+  
   resources :products
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
@@ -10,5 +12,8 @@ Rails.application.routes.draw do
   put 'remove/:product_id', to: 'carts#remove', as: :remove_from
 
   root 'homes#index'
+  get '/contact', to: 'homes#contact'
+  post '/contact', to: 'contacts#create'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
