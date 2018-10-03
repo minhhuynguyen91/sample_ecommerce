@@ -37,8 +37,8 @@
       </li>
       <li class="nav-item">
         <%= form_tag(products_path, method: :get, class: 'form-inline') do %>
-          <%= text_field_tag :barcode, params[:barcode], class: 'form-control mr-sm-2', placeholder: 'Enter barcode' %>
-          <%= submit_tag 'Search', name: nil, class: 'btn btn-outline-success my-2 my-sm-0' %>
+          <%= text_field_tag :barcode, params[:barcode], class: 'form-control mr-sm-2', placeholder: "#{t('navbar.Barcode')}" %>
+          <%= submit_tag "#{t('navbar.Search')}", name: nil, class: 'btn btn-outline-success my-2 my-sm-0' %>
         <% end %>
       </li>
     </ul>
