@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   def self.search(barcode)
     if barcode
-      where('barcode LIKE ?', "%#{barcode}").order('id DESC')
+      where('code LIKE ?', "%#{barcode}").order('id DESC')
     else
       order('id DESC')
     end

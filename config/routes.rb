@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   root 'homes#index'
   get '/contact', to: 'homes#contact'
   post '/contact', to: 'contacts#create'
-  get '/about_me', to: 'homes#about_me'
+  # get '/about_me', to: 'homes#about_me'
+  
+  get '/en', to: 'set_language#en'
+  get '/vi', to: 'set_language#vi'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

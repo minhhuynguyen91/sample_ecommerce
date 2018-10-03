@@ -6,6 +6,6 @@ class HomesController < ApplicationController
     @contact = Contact.new
   end
 
-  def about_me
-  end
+  # def about_me
+  # end
 end

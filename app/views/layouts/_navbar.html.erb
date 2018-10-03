@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">LOGO</a>
+  <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto mx-auto">
       <li class="nav-item">
-        <a class="nav-link" href="<%= root_path %>">Home</a>
+        <a class="nav-link" href="<%= root_path %>"> <%= t('navbar.Home') %> </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact</a>
+        <a class="nav-link" href="/contact"> <%= t('navbar.Contact') %></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="/about_me">About Me</a>
-      </li>
+      </li> -->
       <% if current_user %>
         <li class="nav-item">
           <a class="nav-link" href="/products/new">Add Product</a>
@@ -26,6 +26,15 @@
           <a class="nav-link" href="/users/login">Sign In</a>
         </li>
       <% end %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t('navbar.Language') %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/en">English</a>
+          <a class="dropdown-item" href="/vi">Tiếng Việt </a>
+        </div>
+      </li>
       <li class="nav-item">
         <%= form_tag(products_path, method: :get, class: 'form-inline') do %>
           <%= text_field_tag :barcode, params[:barcode], class: 'form-control mr-sm-2', placeholder: 'Enter barcode' %>

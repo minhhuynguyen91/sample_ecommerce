@@ -1,0 +1,31 @@
+vi:
+  homes:
+    product: Sản Phẩm
+    Seafoods: Thủy hải sản
+    Made_foods: Thức ăn làm sẵn
+    Others: Khác
+
+  products:
+    Barcode: Mã
+    Price: Giá
+    Availability: Tình trạng
+
+    Show:
+      Product_code: Mã
+      Category: Loại
+      Availability: Tình trạng
+
+  contacts:
+    Contact_us: Liên Hệ
+    Contact_description: Chúng tôi sẽ trả lời tất cả câu hỏi của các bạn. Gửi mail cho chúng tôi, chúng tôi sẽ trả lời sớm nhất
+    Address: Địa Chỉ
+    Telephone: Số Điện Thoại
+    form:
+      Name: Tên
+      Messsage: Tin Nhắn
+      
+  navbar:
+    Home: Nhà
+    Contact: Liên Hệ
+    Language: Ngôn Ngữ
+    Barcode: Mã Sản Phẩm

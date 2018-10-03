@@ -4,7 +4,8 @@ class ContactsController < ApplicationController
     @contact = Contact.create(contact_params)
     respond_to do |format|
       if @contact.save
-        redirect_to root_path 
+        redirect_to root_path
+        flash[:success] = 'Your contact is added' 
       else
         flash[:error] = @contact.errors.full_messages
         format.html {render 'homes/contact'}

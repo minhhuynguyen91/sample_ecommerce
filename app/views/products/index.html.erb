@@ -25,10 +25,13 @@
                     <%= product.name %>
                   </div>
                   <div class="product-price">
-                    Price: <%= product.price %> VND
+                    <%= t('products.Barcode') %>: <%= product.code %>
+                  </div>
+                  <div class="product-price">
+                    <%= t('products.Price') %>: <%= product.price %> VND
                   </div>
                   <div class="product-availability">
-                    Availability: <%= product.availability %>
+                    <%= t('products.Availability') %>: <%= product.availability %>
                   </div>
                 </div>
                 <% if current_user %>

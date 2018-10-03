@@ -1,0 +1,31 @@
+en:
+  homes:
+    product: 'Product'
+    Seafoods: Seafoods
+    Made_foods: Made Foods
+    Others: Others
+
+  products:
+    Barcode: Barcode
+    Price: Price
+    Availability: Availability
+
+    Show:
+      Product_code: Product Code
+      Category: Category
+      Availability: Availability
+
+  contacts:
+    Contact_us: Contact Us
+    Contact_description: We will answer any question about our products and your experiences. Reach us and we will respond as soon as we can
+    Address: Address
+    Telephone: Telephone
+    form:
+      Name: Name
+      Messsage: Messsage
+
+  navbar:
+    Home: Home
+    Contact: Contact
+    Language: Language
+    Barcode: Barcode
