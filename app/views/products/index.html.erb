@@ -1,5 +1,13 @@
 <div class="product-page">
-  <%= params[:cat] ? params[:cat] : 'Product' %>
+  <% if params[:cat] == 'Seafoods' %>
+    <%= t('homes.Seafoods') %>
+  <% elsif params[:cat] == 'Made Foods' %>
+    <%= t('homes.Made_foods') %>
+  <% elsif params[:cat] == 'Others' %>
+    <%= t('homes.Others') %>
+  <% else %>
+    <%= t('homes.product') %>
+  <% end %>
   <hr>
 </div>
 
