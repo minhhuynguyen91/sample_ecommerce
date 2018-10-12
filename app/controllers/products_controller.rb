@@ -16,6 +16,8 @@ class ProductsController < ApplicationController
     renderer = Redcarpet::Render::HTML.new(hard_wrap: true)
     @markdown = Redcarpet::Markdown.new(renderer, autolink: true)
     # markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    @cart_action = @product.cart_action current_user.try :id
+
   end
 
   def new

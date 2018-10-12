@@ -16,6 +16,9 @@
       </li> -->
       <% if current_user %>
         <li class="nav-item">
+          <a class="nav-link" href="/cart"> My cart (<span class="cart-count"><%=current_user.cart_count%></span>) </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/products/new">Add Product</a>
         </li>
         <li class="nav-item">

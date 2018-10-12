@@ -64,7 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'redis', '~> 3.0.1'
-gem 'hiredis', '~> 0.4.5'
+gem 'hiredis'
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'

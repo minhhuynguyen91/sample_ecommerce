@@ -1,2 +1,20 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+<br>
+<br>
+<br>
+<div id="mycart" class="small-10 small-centered medium-8 large-8 column">
+  <div class="p1 glassy-bg mb1 text-center radius-l1 radius-r1">
+    <h4>My Cart</h4>
+    <p class="mb0"> You've selected <span class="cart-count"><%=current_user.cart_count%></span> movies!</p>
+  </div>
+  
+  <div class="container">
+    <div id="cart-list">
+      <% @cart_products.each do |product|%>
+        <p>
+          <%= link_to "remove", "#", id: 'remove-cart' , data: {targetUrl: remove_from_cart_path(product)} %>
+          <%= product.name %>       
+        </p>
+      <%end%>
+    </div>
+  </div>
+</div>
